@@ -83,5 +83,34 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+
+BOARD_SEPOLICY_DIRS += \
+    device/motorola/surnia/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    atvc.te \
+    batt_health.te \
+    device.te \
+    dropboxd.te \
+    file.te \
+    file_contexts \
+    init.te \
+    init_shell.te \
+    mbm_spy.te \
+    mm-qcamerad.te \
+    mpdecision.te \
+    property.te \
+    property_contexts \
+    qcamerasvr.te \
+    rild.te \
+    rmt_storage.te \
+    stml0xx.te \
+    system_server.te \
+    tcmd.te \
+    tee.te \
+    ueventd.te
+
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
