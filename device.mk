@@ -22,6 +22,4 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 # Kernel Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/twrp.fstab:root/etc/twrp.fstab \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:root/etc/fstab.qcom \
-    $(LOCAL_PATH)/rootdir/sbin/postrecoveryboot.sh:root/sbin/postrecoveryboot.sh
-
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:root/etc/fstab.qcom
