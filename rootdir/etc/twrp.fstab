@@ -1,0 +1,12 @@
+/system       ext4          /dev/block/platform/soc.0/by-name/system
+/data         f2fs          /dev/block/platform/soc.0/by-name/userdata   flags=fsflags="inline_xattr"
+/cache        ext4          /dev/block/platform/soc.0/by-name/cache
+/persist      ext4          /dev/block/platform/soc.0/by-name/persist
+/boot         emmc          /dev/block/platform/soc.0/by-name/boot
+/recovery     emmc          /dev/block/platform/soc.0/by-name/recovery
+/misc	      emmc          /dev/block/platform/soc.0/by-name/misc
+/firmware     ext4          /dev/block/platform/soc.0/by-name/modem
+/fsg          ext4          /dev/block/platform/soc.0/by-name/fsg
+/external_sd  auto          /dev/block/mmcblk1p1  /dev/block/mmcblk1     flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg      auto          /dev/block/sda1  /dev/block/sda              flags=display="USB OTG";storage;removable
+
