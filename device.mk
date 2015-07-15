@@ -21,5 +21,8 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Kernel Ramdisk
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/twrp.fstab:root/etc/twrp.fstab \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:root/etc/fstab.qcom
+    $(call find-copy-subdir-files,*,${LOCAL_PATH}/rootdir,root)
+
+# Prebuilt
+PRODUCT_COPY_FILES += \
+     $(call find-copy-subdir-files,*,${LOCAL_PATH}/prebuilt/system,system)
