@@ -18,7 +18,7 @@ DEVICE_PATH := device/motorola/surnia
 
 include device/motorola/msm8916-common/BoardConfigCommon.mk
 
-TARGET_KERNEL_CONFIG := surnia-mini_defconfig
+TARGET_KERNEL_CONFIG := surnia_defconfig
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
